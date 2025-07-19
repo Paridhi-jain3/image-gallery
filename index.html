@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Image Gallery</h1>
+
+    <div class="filters">
+      <button onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('nature')">Nature</button>
+      <button onclick="filterImages('animals')">Animals</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" class="nature" onclick="openModal(this.src)" />
+      <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" class="nature" onclick="openModal(this.src)" />
+      <img src="https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?cs=srgb&dl=pexels-pixabay-47547.jpg&fm=jpg" class="animals" onclick="openModal(this.src)" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXIoHufJslrl_nnhF82U7wnmBQpVL_oMCVQ&s" class="animals" onclick="openModal(this.src)" />
+      <img src="https://media.istockphoto.com/id/471926619/photo/moraine-lake-at-sunrise-banff-national-park-canada.jpg?s=612x612&w=0&k=20&c=mujiCtVk5QA697SD3d8V8BGmd91-8HlxCNHkolEA0Bo=" class="nature" onclick="openModal(this.src)" />
+      <img src="https://www.shutterstock.com/image-photo/dog-animal-pet-cat-cute-600nw-2521815587.jpg" class="animals" onclick="openModal(this.src)" />
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+    <div class="navigation">
+      <button onclick="prevImage()">⟵</button>
+      <button onclick="nextImage()">⟶</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
